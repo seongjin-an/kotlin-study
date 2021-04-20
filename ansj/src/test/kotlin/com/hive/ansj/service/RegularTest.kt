@@ -21,6 +21,15 @@ class RegularTest {
         val tsResult = tRegex.findAll(http1)
         tsResult.iterator().forEach{println(it.value)}// t t t
 
+        println(tRegex.pattern)//패턴
+
+        println(httpRegex.containsMatchIn(http1))//Indicates whether the regular expression can find at least one match in the specified input.
+        println(httpRegex.matches(http1))//Indicates whether the regular expression matches the entire input.
+        println(httpRegex.matchEntire(http1))//An instance of MatchResult if the entire input matches or null otherwise.
+
+
+        println(httpRegex.replace(http1, "hi"))
+        
     }
 
 }
