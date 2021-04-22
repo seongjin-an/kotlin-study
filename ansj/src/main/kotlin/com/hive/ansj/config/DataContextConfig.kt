@@ -12,7 +12,9 @@ import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories(
-    basePackages = ["com.hive.ansj.repository"],
+    basePackages = [
+        "com.hive.ansj.repository"
+                   ],
     entityManagerFactoryRef = "entityManager",
     transactionManagerRef = "transactionManager"
 )
