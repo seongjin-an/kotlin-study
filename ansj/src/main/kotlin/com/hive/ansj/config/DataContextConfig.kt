@@ -13,8 +13,8 @@ import javax.sql.DataSource
 @Configuration
 @EnableJpaRepositories(
     basePackages = ["com.hive.ansj.repository"],
-    entityManagerFactoryRef = "an",
-    transactionManagerRef = "imsi"
+    entityManagerFactoryRef = "entityManager",
+    transactionManagerRef = "transactionManager"
 )
 class DataContextConfig {
     @Bean

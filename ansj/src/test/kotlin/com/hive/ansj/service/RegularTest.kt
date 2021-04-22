@@ -29,7 +29,7 @@ class RegularTest {
 
 
         println(httpRegex.replace(http1, "hi"))
-        
+
     }
 
 }
