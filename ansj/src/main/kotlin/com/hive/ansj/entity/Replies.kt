@@ -17,10 +17,15 @@ class Replies (
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "BNO", referencedColumnName = "BNO", insertable = false, updatable = false)
     var board: Board?
-) {
-    constructor(rno: Int, reply: String, bno: Int) : this(rno, reply, bno, null)
-
+){
     override fun toString(): String {
-        return "Replies[rno=$rno, reply=$reply, bno=$bno]"
+        return super.toString()
     }
 }
+//{
+//    constructor(rno: Int, reply: String, bno: Int) : this(rno, reply, bno, null)
+//
+//    override fun toString(): String {
+//        return "Replies[rno=$rno, reply=$reply, bno=$bno]"
+//    }
+//}

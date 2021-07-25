@@ -15,10 +15,15 @@ class Board (
 
     @OneToMany(mappedBy = "bno", fetch = FetchType.LAZY)//mappedBy는 클래스 프로퍼티명과 동일해야 하고..
     var replies: MutableList<Replies>?
-) {
-    constructor(bno: Int, title: String, content: String) : this(bno, title, content, null)
-
-    override fun toString(): String {
+){
+    override fun toString(): String{
         return "Board[bno=$bno, title=$title, content=$content, replies=$replies]"
     }
 }
+//{
+//    constructor(bno: Int, title: String, content: String) : this(bno, title, content, null)
+//
+//    override fun toString(): String {
+//        return "Board[bno=$bno, title=$title, content=$content, replies=$replies]"
+//    }
+//}

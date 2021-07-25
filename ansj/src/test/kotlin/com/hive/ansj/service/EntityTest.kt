@@ -17,39 +17,39 @@ import org.springframework.boot.test.context.SpringBootTest
 )
 class EntityTest {
 
-    @Autowired
-    private lateinit var boardRepository: BoardRepository
-
-    @Autowired
-    private lateinit var repliesRepository: RepliesRepository
-
-    @Test
-    fun boardTest(){
-        val boards: MutableList<Board> = mutableListOf()
-        for(i in 1..5){
-            val board = Board(i,"title..$i", "content...$i")
-            boards.add(board)
-        }
-        boardRepository.saveAll(boards)
-    }
-
-    @Test
-    fun replies(){
-        val boards:List<Board> = boardRepository.findAll()
-        val replies:MutableList<Replies> = mutableListOf()
-        boards.forEach{board ->
-            for(i in 6..10){
-                replies.add(Replies(100*i,"reply..$i",board.bno))
-            }
-        }
-        repliesRepository.saveAll(replies)
-    }
-
-    @Test
-    fun list(){
-        val list:List<Board> = boardRepository.customFindAll()
-        list.forEach{i->println(i)}
-    }
+//    @Autowired
+//    private lateinit var boardRepository: BoardRepository
+//
+//    @Autowired
+//    private lateinit var repliesRepository: RepliesRepository
+//
+//    @Test
+//    fun boardTest(){
+//        val boards: MutableList<Board> = mutableListOf()
+//        for(i in 1..5){
+//            val board = Board(i,"title..$i", "content...$i")
+//            boards.add(board)
+//        }
+//        boardRepository.saveAll(boards)
+//    }
+//
+//    @Test
+//    fun replies(){
+//        val boards:List<Board> = boardRepository.findAll()
+//        val replies:MutableList<Replies> = mutableListOf()
+//        boards.forEach{board ->
+//            for(i in 6..10){
+//                replies.add(Replies(100*i,"reply..$i",board.bno))
+//            }
+//        }
+//        repliesRepository.saveAll(replies)
+//    }
+//
+//    @Test
+//    fun list(){
+//        val list:List<Board> = boardRepository.customFindAll()
+//        list.forEach{i->println(i)}
+//    }
 
 
 }

@@ -1,4 +1,2 @@
 server:
-  port: 20000
-  servlet:
-    contex-path: /app
+  port: 9000
