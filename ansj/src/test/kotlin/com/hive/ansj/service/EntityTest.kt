@@ -17,6 +17,8 @@ import org.springframework.boot.test.context.SpringBootTest
 )
 class EntityTest {
 
+    @Autowired
+    private lateinit var testService: TestService
 //    @Autowired
 //    private lateinit var boardRepository: BoardRepository
 //
@@ -50,6 +52,16 @@ class EntityTest {
 //        val list:List<Board> = boardRepository.customFindAll()
 //        list.forEach{i->println(i)}
 //    }
+
+    @Test
+    fun saveTest(){
+        testService.saveTest();
+    }
+
+    @Test
+    fun transaction(){
+        testService.transaction()
+    }
 
 
 }
